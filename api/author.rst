@@ -95,3 +95,45 @@ Retrieve the specified author's published poems::
     Returns: List of Poems
 
     Method: GET
+
+Get author's followers
+----------------------
+
+``GET /api/author/<author_id>/follower``
+
+Retrieve a list of followers for the given author::
+
+    Returns: List of followers
+
+    Method: GET
+
+follow
+------
+
+``PUT /api/author/<author_id>/follower``
+
+Follow the given author::
+
+    Returns: Author
+
+    Method: PUT
+
+Unfollow
+--------
+``DELETE /api/author/<author_id>/follower``
+
+Unfollow the given author::
+
+    Returns: Author
+
+    Method: DELETE
+
+Get list of authors
+-------------------
+``GET /api/author/list/<list_id>``
+
+Get a list of authors (e.g. featured or top or by genre)::
+
+    Returns: List of Authors
+
+    Method: GET

@@ -45,18 +45,10 @@ All poem endpoints will return json of the form::
   - This key can be used to retrieve poems using the ``/api/poem/<share_key>/private`` endpoint.
 
 
-all
----
-
-``GET /api/poem``
-
-Return list of all poems owned by the current user.
-
-
 get
 ---
 
-``GET /api/poem/<title-id>``
+``GET /api/poem/<poem_id>``
 
 Returns a poem if it exists::
 
@@ -65,115 +57,41 @@ Returns a poem if it exists::
     Body: empty
 
 
-share
------
+increment metric
+----------------
 
-``POST /api/poem/<share_key>/private``
+``PUT /api/poem/<poem_id>/metric``
 
-Returns a poem that has NOT been published. This poem can be retrieved by a secret ``share_key`` that is retrieved using the ``/api/poem/<poem_id/share`` endpoint::
+Used to increment a metric for the given poem::
 
-    Method: POST
+    Returns: Poem
+
+    Method: PUT
     Content-Type: application/json
-    Body: empty
-
-
-create
-------
-
-``POST /api/poem/create``
-
-Create a new poem::
-
-    Logged in: Required
-    Method: POST
-    Content-Type: application/json
-    Body: empty
-
-
-update
-------
-
-``POST /api/poem/<poem_id>/save``
-
-Save the poem corresponding to the given poem_id. Can only be accessed by the author of the poem::
-
-    Logged in: Required
-    Ownership: Required
-    Method: POST
-    Content-Type: application/json
-    Body:
-    {
-       "tags": ["happy", "bird", "cloud"],
-       "title": "A Poem Title",
-       "body": "A poem body with html"
+    Body: {
+        "metric": "read"
     }
-
-publish
--------
-
-``POST /api/poem/<poem_id>/publish``
-
-Publish the poem corresponding to the given poem_id. This endpoint will implicitly ``save`` the poem in its current state. Can only be accessed by the author of the poem::
-
-    Logged in: Required
-    Ownership: Required
-    Method: POST
-    Content-Type: application/json
-    Body:
-    {
-       "tags": ["happy", "bird", "cloud"],
-       "title": "A Poem Title",
-       "body": "A poem body with html"
-    }
-
-share
------
-
-``POST /api/poem/<poem_id>/share``
-
-Get a ``share_key`` for the poem corresponding to the given ``poem_id``::
-
-
-    Logged in: Required
-    Ownership: Required
-    Method: POST
-    Content-Type: application/json
-    Body: Empty
-
-**This endpoint will return a json response identical to other poem endpoints, except with an added** ``share_key`` **value found in** ``data.poem.share_key``
-
-delete
-------
-
-``POST /api/poem/<poem_id>/delete``
-
-Delete the poem corresponding to the given ``poem_id``::
-
-    Logged in: Required
-    Ownership: Required
-    Method: POST
-    Content-Type: application/json
-    Body: Empty
-
 
 like
 ----
 
-``GET /api/poem/<poem_id>/like``
+``PUT /api/poem/<poem_id>/like``
 
-Increment the like count for the poem corresponding to the given ``poem_id``::
+Current user like the specified poem::
 
+    Returns: Poem
     Logged in: Required
-    Ownership: Not required
-    Method: GET
 
+    Method: PUT
 
-read
+unlike
 ----
 
-``GET/POST /api/poem/<poem_id>/read``
+``DELETE /api/poem/<poem_id>/like``
 
-Increment the read count for the poem corresponding to the given ``poem_id``::
+Current user like the specified poem::
 
+    Returns: Poem
     Logged in: Required
-    Ownership: Not required
+
+    Method: PUT

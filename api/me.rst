@@ -1,3 +1,8 @@
+.. _me_api:
+
+Me
+==
+
 - Login is required for all endpoints.
 - Me endpoints begin with ``/api/me``
 
@@ -118,7 +123,7 @@ Used to update the specified poem::
 
 `NOTE`: is_published is optional. Set to true to publish. Set to false to unpublish.
 
-delete
+delete poem
 ------
 
 ``DELETE /api/me/poem/<poem_id>``
@@ -129,3 +134,97 @@ Delete the specified poem::
 
     Method: DELETE
     Body: Empty
+
+get all collections
+--------------
+
+``GET /api/me/collection``
+
+Used to get a list of all of the current user's collections, public or private::
+
+    Returns: List of Collections
+
+    Method: GET
+
+create new collection
+------------------
+
+``POST /api/me/collection``
+
+Used to create a new collection for the current user::
+
+    Returns: Collection
+
+    Method: POST
+    Content-Type: application/json
+    Body: {
+        "title": "New Collection",
+        "tags": ["a", "cool", "collection"],
+        "description": "this collection is cool.",
+        "is_public": true
+    }
+
+`NOTE`: All arguments optional.
+
+update collection
+--------------------
+
+``PUT /api/me/collection/<collection_id>``
+
+Used to update an existing collection owned by the current user::
+
+    Returns: Collection
+
+    Method: PUT
+    Content-Type: multipart/form-data
+    Body: {
+        image: <an image>
+        title: "title"
+        tags: ["some", "tags"]
+        description: "a description"
+        is_public: false
+    }
+
+delete collection
+-----------------
+
+``DELETE /api/me/collection/<collection_id>``
+
+Used to delete an existing collection owned by the current user::
+
+    Returns: Collection
+
+    Method: DELETE
+
+get poems in collection
+-----------------------
+
+``GET /api/me/collection/<collection_id>/poem``
+
+Used to get all poems in the given collection owned by the current user::
+
+    Returns: List of poems
+
+    Method: GET
+
+add poem to collection
+----------------------
+
+``PUT /api/me/collection/<collection_id>/poem/<poem_id>``
+
+Used to add a poem to the given collection::
+
+    Returns: Collection
+
+    Method: PUT
+    Content-Type: application/json
+    Body: {
+        "is_hidden": true
+    }
+
+remove poem from collection
+---------------------------
+
+``DELETE /api/me/collections/<collection_id>/poem/<poem_id>``
+
+Used to delete a poem from the specified collection.
