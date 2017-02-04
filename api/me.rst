@@ -13,7 +13,7 @@ get
 
 Used to get the current user's public and personal data::
 
-    Returns: Author.
+    Returns: Author Response
 
     Method: GET
     Content-Type: application/json
@@ -25,7 +25,7 @@ update
 
 Used to update current user's settings::
 
-    Returns: Author.
+    Returns: Author Response
 
     Method: PUT
     Content-Type: application/json
@@ -48,6 +48,8 @@ photo
 
 Used to upload profile photos for the author::
 
+    Response: Author Response
+
     Method: POST
     Content-Type: multipart/form-data
     Body: Files keyed by name, e.g.:
@@ -63,7 +65,7 @@ delete
 
 Used to delete the current user::
 
-    Returns: Author.
+    Returns: Author Response
 
     Method: DELETE
     Body: Empty
@@ -75,7 +77,7 @@ create poem
 
 Used to create a new poem with the current user as the author::
 
-    Returns: Poem
+    Returns: Poem Response
 
     Method: POST
     Content-Type: application/json
@@ -88,7 +90,7 @@ get all poems
 
 Used to retrieve all poems by the current user, public and private::
 
-    Returns: List of Poems
+    Returns: List of Poems Response
 
     Method: GET
 
@@ -99,7 +101,7 @@ get poem
 
 Used to get the specified poem::
 
-    Returns: Poem
+    Returns: Poem Response
 
     Method: GET
 
@@ -110,7 +112,7 @@ update poem
 
 Used to update the specified poem::
 
-    Returns: Poem
+    Returns: Poem Response
 
     Method: POST
     Content-Type: application/json
@@ -130,7 +132,7 @@ delete poem
 
 Delete the specified poem::
 
-    Returns: Poem
+    Returns: Poem Response
 
     Method: DELETE
     Body: Empty
@@ -142,7 +144,7 @@ get all collections
 
 Used to get a list of all of the current user's collections, public or private::
 
-    Returns: List of Collections
+    Returns: List of Collections Response
 
     Method: GET
 
@@ -153,7 +155,7 @@ create new collection
 
 Used to create a new collection for the current user::
 
-    Returns: Collection
+    Returns: Collection Response
 
     Method: POST
     Content-Type: application/json
@@ -192,7 +194,7 @@ delete collection
 
 Used to delete an existing collection owned by the current user::
 
-    Returns: Collection
+    Returns: Collection Response
 
     Method: DELETE
 
@@ -203,7 +205,7 @@ get poems in collection
 
 Used to get all poems in the given collection owned by the current user::
 
-    Returns: List of poems
+    Returns: List of poems Response
 
     Method: GET
 
@@ -214,7 +216,7 @@ add poem to collection
 
 Used to add a poem to the given collection::
 
-    Returns: Collection
+    Returns: Collection Response
 
     Method: PUT
     Content-Type: application/json
@@ -227,4 +229,8 @@ remove poem from collection
 
 ``DELETE /api/me/collections/<collection_id>/poem/<poem_id>``
 
-Used to delete a poem from the specified collection.
+Used to delete a poem from the specified collection::
+
+    Returns: Collection Response
+
+    Method: DELETE

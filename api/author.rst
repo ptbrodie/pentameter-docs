@@ -7,39 +7,6 @@ Author
 - Pentameter author endpoints are used to manage author-centered activity.
 - All author endpoints begin with the prefix ``/api/author``.
 
-All author endpoints will return json of the form::
-
-    {
-       "data" : {
-            "status_code": "<200 404 403 etc>",
-            "message": "<message>",
-            "author": {
-                "firstname": "firstname",
-                "lastname": "lastname",
-                "username": "username",
-                "fullname": "firstname lastname",
-                "email": "email@email.com",
-                "bio": "this is a bio.",
-                "birth_year": "1900",
-                "death_year": "1984",
-                "profile_banner_url": "http://assets.pentameter.org/img/banner_url.jpg",
-                "profile_photo_url": "http://assets.pentameter.org/img/photo_url.jpg",
-                "poems_count": "2",
-                "poems": [
-                   { "is_published": "true", "id": "poem_id_1","title": "Poem Title 1", "body": "body with<br>html", "etc": "etc" },
-                   { "is_published": "false", "id": "poem_id_2","title": "Poem Title 2", "body": "body with<br>html 2", "etc": "etc" }
-                ],
-                "collections_count": "1",
-                "collections": [
-                   { "is_public": "true", "id": "collection_id_1", "etc": "etc" }
-                ]
-            }
-       }
-    }
-
-- ``"author"`` section will be an empty object if no author found.
-- ``"poems"`` section will show ``is_published`` if and only if the owner of the poem is making the request.
-
 Get author by ID
 ----------------
 
@@ -47,7 +14,7 @@ Get author by ID
 
 Retrieve an author by system id::
 
-    Returns: Author
+    Returns: Author Response
 
     Method: GET
 
@@ -58,7 +25,7 @@ Get one collection by author
 
 Retrieve the specified collection by the specified author::
 
-    Returns: Collection
+    Returns: Collection Response
 
     Method: GET
 
@@ -69,10 +36,9 @@ Get collections by author
 
 Retrieve the specified author's public collections::
 
-    Returns: List of Collections
+    Returns: List of Collections Response
 
     Method: GET
-
 
 Get one poem by author
 ------------------
@@ -81,7 +47,7 @@ Get one poem by author
 
 Retrieve the specified poem by the specified author::
 
-    Returns: Poem
+    Returns: Poem Response
 
     Method: GET
 
@@ -92,7 +58,7 @@ Get poems by author
 
 Retrieve the specified author's published poems::
 
-    Returns: List of Poems
+    Returns: List of Poems Response
 
     Method: GET
 
@@ -103,7 +69,7 @@ Get author's followers
 
 Retrieve a list of followers for the given author::
 
-    Returns: List of followers
+    Returns: List of Authors Response
 
     Method: GET
 
@@ -114,7 +80,7 @@ follow
 
 Follow the given author::
 
-    Returns: Author
+    Returns: Author Response
 
     Method: PUT
 
@@ -124,7 +90,7 @@ Unfollow
 
 Unfollow the given author::
 
-    Returns: Author
+    Returns: Author Response
 
     Method: DELETE
 
@@ -134,6 +100,6 @@ Get list of authors
 
 Get a list of authors (e.g. featured or top or by genre)::
 
-    Returns: List of Authors
+    Returns: List of Authors Response
 
     Method: GET

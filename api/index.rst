@@ -14,15 +14,17 @@ All endpoints are prepended with ``/api/`` and will respond with JSON back with 
         }
     }
 
-Responses
----------
+Response Types
+--------------
 
-* Author Response
-* Collection Response
-* Poem Response
-* List of Authors
-* List of Collections
-* List of Poems
+.. toctree::
+
+    Author Response
+    Collection Response
+    Poem Response
+    List of Authors
+    List of Collections
+    List of Poems
 
 
 
