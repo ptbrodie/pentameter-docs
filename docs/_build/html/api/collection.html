@@ -1,0 +1,561 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Collection &mdash; Pentameter 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Pentameter 0.1.0 documentation" href="../index.html"/>
+        <link rel="up" title="API" href="index.html"/>
+        <link rel="next" title="Poem" href="poem.html"/>
+        <link rel="prev" title="Author" href="author.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Pentameter
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gitflow.html">Gitflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploying/index.html">Deploying</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#overview">Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#endpoints">Endpoints</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="author.html">Author</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Collection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#new">new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update">update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#all">all</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get">get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-poem">add poem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remove-poem">remove poem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remove">remove</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="poem.html">Poem</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../frontend/index.html">Front End</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Pentameter</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">API</a> &raquo;</li>
+      
+    <li>Collection</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/collection.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="collection">
+<span id="collection-api"></span><h1>Collection<a class="headerlink" href="#collection" title="Permalink to this headline">¶</a></h1>
+<p>All endpoints require an authenticated user.</p>
+<div class="section" id="new">
+<h2>new<a class="headerlink" href="#new" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">api/collection/new</span></code></p>
+<p>Create a new collection:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Accept</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Cookie</span><span class="p">:</span> <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChKSKQ</span><span class="o">.</span><span class="n">ERr9S2vnshbo0VMD2Ohrrntq7qk</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;baz&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The baz collection&quot;</span><span class="p">,</span> <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="s2">&quot;temp, for example&quot;</span><span class="p">}</span>
+ <span class="o">--</span> <span class="n">response</span> <span class="o">--</span>
+<span class="mi">200</span> <span class="n">OK</span>
+<span class="n">Server</span><span class="p">:</span>  <span class="n">nginx</span><span class="o">/</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">6</span> <span class="p">(</span><span class="n">Ubuntu</span><span class="p">)</span>
+<span class="n">Date</span><span class="p">:</span>  <span class="n">Tue</span><span class="p">,</span> <span class="mi">10</span> <span class="n">May</span> <span class="mi">2016</span> <span class="mi">23</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">14</span> <span class="n">GMT</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span>  <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span>  <span class="mi">501</span>
+<span class="n">Connection</span><span class="p">:</span>  <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
+<span class="n">Set</span><span class="o">-</span><span class="n">Cookie</span><span class="p">:</span>  <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChQGYg</span><span class="o">.</span><span class="n">g5cLxbYULMcZIRu0iHYj6OGNIA8</span><span class="p">;</span> <span class="n">HttpOnly</span><span class="p">;</span> <span class="n">Path</span><span class="o">=/</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;collection&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;048d0a75-023c-4705-a483-9eff8cb7ed8f&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;create_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-10T23:54:31.956597&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The baz collection&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;53aa8968-077b-4781-a134-7e70afc79d7b&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_public&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;modify_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-10T23:55:14.267262&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;poems&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="s2">&quot;temp, for example&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;baz&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;53aa8968-077b-4781-a134-7e70afc79d7b&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Collection&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">200</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="update">
+<h2>update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">PUT/PATCH</span> <span class="pre">api/collection/my-collection</span></code></p>
+<p>Update a collection:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Accept</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Cookie</span><span class="p">:</span> <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChKSKQ</span><span class="o">.</span><span class="n">ERr9S2vnshbo0VMD2Ohrrntq7qk</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;not-baz&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This isn&#39;t the baz collection&quot;</span><span class="p">,</span> <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="s2">&quot;temp&quot;</span><span class="p">}</span>
+ <span class="o">--</span> <span class="n">response</span> <span class="o">--</span>
+<span class="mi">200</span> <span class="n">OK</span>
+<span class="n">Server</span><span class="p">:</span>  <span class="n">nginx</span><span class="o">/</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">6</span> <span class="p">(</span><span class="n">Ubuntu</span><span class="p">)</span>
+<span class="n">Date</span><span class="p">:</span>  <span class="n">Wed</span><span class="p">,</span> <span class="mi">11</span> <span class="n">May</span> <span class="mi">2016</span> <span class="mi">00</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mi">29</span> <span class="n">GMT</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span>  <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span>  <span class="mi">509</span>
+<span class="n">Connection</span><span class="p">:</span>  <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
+<span class="n">Set</span><span class="o">-</span><span class="n">Cookie</span><span class="p">:</span>  <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChQPWQ</span><span class="o">.</span><span class="n">a60tpcCzKLf0oKkxbzd2fEJyy_k</span><span class="p">;</span> <span class="n">HttpOnly</span><span class="p">;</span> <span class="n">Path</span><span class="o">=/</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;collection&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;048d0a75-023c-4705-a483-9eff8cb7ed8f&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;create_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-10T23:54:31.956597&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This isn&#39;t the baz collection&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;53aa8968-077b-4781-a134-7e70afc79d7b&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_public&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;modify_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-11T00:33:29.991084&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;poems&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="s2">&quot;temp&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;not-baz&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;53aa8968-077b-4781-a134-7e70afc79d7b&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Collection found&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">200</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="all">
+<h2>all<a class="headerlink" href="#all" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/api/collection/</span></code></p>
+<p>Get all collections for an authenticated user:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Accept</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Cookie</span><span class="p">:</span> <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChKSKQ</span><span class="o">.</span><span class="n">ERr9S2vnshbo0VMD2Ohrrntq7qk</span>
+
+ <span class="o">--</span> <span class="n">response</span> <span class="o">--</span>
+<span class="mi">200</span> <span class="n">OK</span>
+<span class="n">Server</span><span class="p">:</span>  <span class="n">nginx</span><span class="o">/</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">6</span> <span class="p">(</span><span class="n">Ubuntu</span><span class="p">)</span>
+<span class="n">Date</span><span class="p">:</span>  <span class="n">Tue</span><span class="p">,</span> <span class="mi">10</span> <span class="n">May</span> <span class="mi">2016</span> <span class="mi">00</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">47</span> <span class="n">GMT</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span>  <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span>  <span class="mi">398</span>
+<span class="n">Connection</span><span class="p">:</span>  <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
+<span class="n">Set</span><span class="o">-</span><span class="n">Cookie</span><span class="p">:</span>  <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChK_Fw</span><span class="o">.</span><span class="n">RkvrBZibfuZZlqvMmyujRmNw3To</span><span class="p">;</span> <span class="n">HttpOnly</span><span class="p">;</span> <span class="n">Path</span><span class="o">=/</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;collections&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;create_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-09T23:25:37.093377&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3678eedb-85d2-4018-88c3-303d2c6d1d92&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;is_public&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;modify_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-10T00:03:02.257568&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;poems&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Gore&quot;</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;All Collections&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">200</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get">
+<h2>get<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/api/collection/my-collection</span></code></p>
+<p>Get a collection for an authenticated user:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Accept</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Cookie</span><span class="p">:</span> <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChKSKQ</span><span class="o">.</span><span class="n">ERr9S2vnshbo0VMD2Ohrrntq7qk</span>
+
+ <span class="o">--</span> <span class="n">response</span> <span class="o">--</span>
+<span class="mi">200</span> <span class="n">OK</span>
+<span class="n">Server</span><span class="p">:</span>  <span class="n">nginx</span><span class="o">/</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">6</span> <span class="p">(</span><span class="n">Ubuntu</span><span class="p">)</span>
+<span class="n">Date</span><span class="p">:</span>  <span class="n">Tue</span><span class="p">,</span> <span class="mi">10</span> <span class="n">May</span> <span class="mi">2016</span> <span class="mi">00</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">36</span> <span class="n">GMT</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span>  <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span>  <span class="mi">1791</span>
+<span class="n">Connection</span><span class="p">:</span>  <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
+<span class="n">Set</span><span class="o">-</span><span class="n">Cookie</span><span class="p">:</span>  <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChLBKA</span><span class="o">.</span><span class="n">b0t3eW</span><span class="o">-</span><span class="mi">3</span><span class="n">G66iIg</span><span class="o">-</span><span class="n">AX8Pb</span><span class="o">-</span><span class="mi">6</span><span class="n">wiQlQ</span><span class="p">;</span> <span class="n">HttpOnly</span><span class="p">;</span> <span class="n">Path</span><span class="o">=/</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;collection&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;create_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-09T23:25:37.093377&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3678eedb-85d2-4018-88c3-303d2c6d1d92&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_public&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;modify_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-10T00:47:11.525159&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;poems&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;This is chino&#39;s cool bio.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;birth_year&quot;</span><span class="p">:</span> <span class="mi">1934</span><span class="p">,</span>
+            <span class="s2">&quot;death_year&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;f5e89dc3-7281-495c-99b4-a9177e927bd2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;poems&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s2">&quot;fa49a31a-4e5a-4b24-a7b1-40000de086f0&quot;</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;profile_banner_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;profile_photo_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;chino&quot;</span>
+          <span class="p">},</span>
+          <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;</span><span class="se">\n</span><span class="s2"> In a circle of 12 winter trees</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> I&amp;rsquo;m hunched</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> Remembering being fled from</span><span class="se">\n</span><span class="s2">&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&lt;p&gt;</span><span class="se">\n</span><span class="s2"> &amp;mdash;Who gave me this wool sweater?</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> So it please you life, we won&amp;rsquo;t go alone&amp;mdash;</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> Next year will be better.</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> Remember that white tree?</span><span class="se">\n</span><span class="s2">&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&lt;p&gt;</span><span class="se">\n</span><span class="s2"> The white underpaint of the government.</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> The country of bone.</span><span class="se">\n</span><span class="s2">&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&lt;p&gt;</span><span class="se">\n</span><span class="s2"> &lt;em&gt;</span><span class="se">\n</span><span class="s2">  In memory of Michael Brown</span><span class="se">\n</span><span class="s2"> &lt;/em&gt;</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> &amp;nbsp;</span><span class="se">\n</span><span class="s2">&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;create_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-06T21:02:17.668783&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;feature_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-09-09T00:00:00&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;fa49a31a-4e5a-4b24-a7b1-40000de086f0&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;modify_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-06T23:55:15.899121&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;read_count&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+          <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+          <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Poem from the Russian&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;title_id&quot;</span><span class="p">:</span> <span class="s2">&quot;poem-from-the-russian&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="n">null</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Gore&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3678eedb-85d2-4018-88c3-303d2c6d1d92&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Collection&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">200</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-poem">
+<h2>add poem<a class="headerlink" href="#add-poem" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">/api/collection/my-collection/poem/famous-poem</span></code></p>
+<p>Add a poem to a collection:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Accept</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Cookie</span><span class="p">:</span> <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChKSKQ</span><span class="o">.</span><span class="n">ERr9S2vnshbo0VMD2Ohrrntq7qk</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+
+ <span class="o">--</span> <span class="n">response</span> <span class="o">--</span>
+<span class="mi">200</span> <span class="n">OK</span>
+<span class="n">Server</span><span class="p">:</span>  <span class="n">nginx</span><span class="o">/</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">6</span> <span class="p">(</span><span class="n">Ubuntu</span><span class="p">)</span>
+<span class="n">Date</span><span class="p">:</span>  <span class="n">Tue</span><span class="p">,</span> <span class="mi">10</span> <span class="n">May</span> <span class="mi">2016</span> <span class="mi">00</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">24</span> <span class="n">GMT</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span>  <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span>  <span class="mi">1791</span>
+<span class="n">Connection</span><span class="p">:</span>  <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
+<span class="n">Set</span><span class="o">-</span><span class="n">Cookie</span><span class="p">:</span>  <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChLC_A</span><span class="o">.</span><span class="n">YDori36mSmfQWAb3gzo3bsf4QtA</span><span class="p">;</span> <span class="n">HttpOnly</span><span class="p">;</span> <span class="n">Path</span><span class="o">=/</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;collection&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;create_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-09T23:25:37.093377&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3678eedb-85d2-4018-88c3-303d2c6d1d92&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_public&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;modify_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-10T00:55:24.438087&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;poems&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;This is chino&#39;s cool bio.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;birth_year&quot;</span><span class="p">:</span> <span class="mi">1934</span><span class="p">,</span>
+            <span class="s2">&quot;death_year&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;f5e89dc3-7281-495c-99b4-a9177e927bd2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;poems&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s2">&quot;fa49a31a-4e5a-4b24-a7b1-40000de086f0&quot;</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;profile_banner_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;profile_photo_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;chino&quot;</span>
+          <span class="p">},</span>
+          <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;</span><span class="se">\n</span><span class="s2"> In a circle of 12 winter trees</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> I&amp;rsquo;m hunched</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> Remembering being fled from</span><span class="se">\n</span><span class="s2">&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&lt;p&gt;</span><span class="se">\n</span><span class="s2"> &amp;mdash;Who gave me this wool sweater?</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> So it please you life, we won&amp;rsquo;t go alone&amp;mdash;</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> Next year will be better.</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> Remember that white tree?</span><span class="se">\n</span><span class="s2">&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&lt;p&gt;</span><span class="se">\n</span><span class="s2"> The white underpaint of the government.</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> The country of bone.</span><span class="se">\n</span><span class="s2">&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&lt;p&gt;</span><span class="se">\n</span><span class="s2"> &lt;em&gt;</span><span class="se">\n</span><span class="s2">  In memory of Michael Brown</span><span class="se">\n</span><span class="s2"> &lt;/em&gt;</span><span class="se">\n</span><span class="s2"> &lt;br/&gt;</span><span class="se">\n</span><span class="s2"> &amp;nbsp;</span><span class="se">\n</span><span class="s2">&lt;/p&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;create_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-06T21:02:17.668783&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;feature_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-09-09T00:00:00&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;fa49a31a-4e5a-4b24-a7b1-40000de086f0&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;modify_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-06T23:55:15.899121&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;read_count&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+          <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+          <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Poem from the Russian&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;title_id&quot;</span><span class="p">:</span> <span class="s2">&quot;poem-from-the-russian&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="n">null</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Gore&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3678eedb-85d2-4018-88c3-303d2c6d1d92&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Poem added&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">200</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-poem">
+<h2>remove poem<a class="headerlink" href="#remove-poem" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">DELETE</span> <span class="pre">/api/collection/my-collection/poem/famous-poem/remove</span></code></p>
+<p>Remove a poem from a collection:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Accept</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Cookie</span><span class="p">:</span> <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChKSKQ</span><span class="o">.</span><span class="n">ERr9S2vnshbo0VMD2Ohrrntq7qk</span>
+
+ <span class="o">--</span> <span class="n">response</span> <span class="o">--</span>
+<span class="mi">200</span> <span class="n">OK</span>
+<span class="n">Server</span><span class="p">:</span>  <span class="n">nginx</span><span class="o">/</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">6</span> <span class="p">(</span><span class="n">Ubuntu</span><span class="p">)</span>
+<span class="n">Date</span><span class="p">:</span>  <span class="n">Tue</span><span class="p">,</span> <span class="mi">10</span> <span class="n">May</span> <span class="mi">2016</span> <span class="mi">01</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">38</span> <span class="n">GMT</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span>  <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span>  <span class="mi">412</span>
+<span class="n">Connection</span><span class="p">:</span>  <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
+<span class="n">Set</span><span class="o">-</span><span class="n">Cookie</span><span class="p">:</span>  <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChLNHg</span><span class="o">.</span><span class="n">DCK3D</span><span class="o">-</span><span class="n">hAQ3PYvamt8a9F5kNM1Hk</span><span class="p">;</span> <span class="n">HttpOnly</span><span class="p">;</span> <span class="n">Path</span><span class="o">=/</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;collection&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;create_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-09T23:25:37.093377&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3678eedb-85d2-4018-88c3-303d2c6d1d92&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_public&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;modify_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-10T01:38:34.221338&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;poems&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Gore&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3678eedb-85d2-4018-88c3-303d2c6d1d92&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Poem removed&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">200</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove">
+<h2>remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">DELETE</span> <span class="pre">/api/collection/my-collection/remove</span></code></p>
+<p>Remove a collection for an authenticated user:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Accept</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Cookie</span><span class="p">:</span> <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChKSKQ</span><span class="o">.</span><span class="n">ERr9S2vnshbo0VMD2Ohrrntq7qk</span>
+
+ <span class="o">--</span> <span class="n">response</span> <span class="o">--</span>
+<span class="mi">200</span> <span class="n">OK</span>
+<span class="n">Server</span><span class="p">:</span>  <span class="n">nginx</span><span class="o">/</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">6</span> <span class="p">(</span><span class="n">Ubuntu</span><span class="p">)</span>
+<span class="n">Date</span><span class="p">:</span>  <span class="n">Tue</span><span class="p">,</span> <span class="mi">10</span> <span class="n">May</span> <span class="mi">2016</span> <span class="mi">02</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">32</span> <span class="n">GMT</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span>  <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span>  <span class="mi">416</span>
+<span class="n">Connection</span><span class="p">:</span>  <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
+<span class="n">Set</span><span class="o">-</span><span class="n">Cookie</span><span class="p">:</span>  <span class="n">session</span><span class="o">=</span><span class="n">eyJfZnJlc2giOnRydWUsIl9pZCI6eyIgYiI6Ik1qRXpNVE00WlRFM09UVXlOVFZoTURkbVpETTJaalV3WkdZNVlXWTVaamM9In0sInVzZXJfaWQiOiIwNDhkMGE3NS0wMjNjLTQ3MDUtYTQ4My05ZWZmOGNiN2VkOGYifQ</span><span class="o">.</span><span class="n">ChLT5A</span><span class="o">.</span><span class="n">DUbIa_zsBETUoOr24oy_HDONrWQ</span><span class="p">;</span> <span class="n">HttpOnly</span><span class="p">;</span> <span class="n">Path</span><span class="o">=/</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;collection&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;create_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-10T02:04:12.739771&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d1a8054a-dc8b-48c5-87cd-b5d455e274a4&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;is_public&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;modify_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-05-10T02:06:06.731052&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;poems&quot;</span><span class="p">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">null</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d1a8054a-dc8b-48c5-87cd-b5d455e274a4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Removed collection&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">200</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="poem.html" class="btn btn-neutral float-right" title="Poem" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="author.html" class="btn btn-neutral" title="Author" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Pentameter.org.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

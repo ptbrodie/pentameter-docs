@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Author &mdash; Pentameter 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Pentameter 0.1.0 documentation" href="../index.html"/>
+        <link rel="up" title="API" href="index.html"/>
+        <link rel="next" title="Collection" href="collection.html"/>
+        <link rel="prev" title="API" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Pentameter
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gitflow.html">Gitflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploying/index.html">Deploying</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#overview">Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#endpoints">Endpoints</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Author</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#get">get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#username">username</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#signup">signup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#login">login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logout">logout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#is-authorized">is authorized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#forgot-password">forgot password</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reset-password">reset password</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#email-confirmation">email confirmation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete">delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#photo">photo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update">update</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="collection.html">Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poem.html">Poem</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../frontend/index.html">Front End</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Pentameter</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">API</a> &raquo;</li>
+      
+    <li>Author</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/author.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="author">
+<span id="author-api"></span><h1>Author<a class="headerlink" href="#author" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Pentameter users are called <cite>authors</cite>.</li>
+<li>Pentameter author endpoints are used to manage author-centered activity.</li>
+<li>All author endpoints begin with the prefix <code class="docutils literal"><span class="pre">/api/author</span></code>.</li>
+</ul>
+<p>All author endpoints will return json of the form:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;data&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;200 404 403 etc&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;message&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;firstname&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;lastname&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;username&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fullname&quot;</span><span class="p">:</span> <span class="s2">&quot;firstname lastname&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email@email.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;this is a bio.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;birth_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1900&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;death_year&quot;</span><span class="p">:</span> <span class="s2">&quot;1984&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;profile_banner_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://assets.pentameter.org/img/banner_url.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;profile_photo_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://assets.pentameter.org/img/photo_url.jpg&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;poems_count&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;poems&quot;</span><span class="p">:</span> <span class="p">[</span>
+               <span class="p">{</span> <span class="s2">&quot;is_published&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;poem_id_1&quot;</span><span class="p">,</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Poem Title 1&quot;</span><span class="p">,</span> <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;body with&lt;br&gt;html&quot;</span><span class="p">,</span> <span class="s2">&quot;etc&quot;</span><span class="p">:</span> <span class="s2">&quot;etc&quot;</span> <span class="p">},</span>
+               <span class="p">{</span> <span class="s2">&quot;is_published&quot;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;poem_id_2&quot;</span><span class="p">,</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Poem Title 2&quot;</span><span class="p">,</span> <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;body with&lt;br&gt;html 2&quot;</span><span class="p">,</span> <span class="s2">&quot;etc&quot;</span><span class="p">:</span> <span class="s2">&quot;etc&quot;</span> <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;collections_count&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;collections&quot;</span><span class="p">:</span> <span class="p">[</span>
+               <span class="p">{</span> <span class="s2">&quot;is_public&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;collection_id_1&quot;</span><span class="p">,</span> <span class="s2">&quot;etc&quot;</span><span class="p">:</span> <span class="s2">&quot;etc&quot;</span> <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&quot;author&quot;</span></code> section will be an empty object if no author found.</li>
+<li><code class="docutils literal"><span class="pre">&quot;poems&quot;</span></code> section will show <code class="docutils literal"><span class="pre">is_published</span></code> if and only if the owner of the poem is making the request.</li>
+</ul>
+<div class="section" id="get">
+<h2>get<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/api/author/&lt;author_id&gt;</span></code></p>
+<p>Retrieve an author by system id:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">POST</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Body</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="s2">&quot;author_id&quot;</span><span class="p">:</span> <span class="s2">&quot;author-system-id-0123&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="username">
+<h2>username<a class="headerlink" href="#username" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">/api/author/username</span></code></p>
+<p>Retrieve an author by username:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">POST</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Body</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;coolcat1999&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="signup">
+<h2>signup<a class="headerlink" href="#signup" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">/api/author/signup</span></code></p>
+<p>Registers and creates a new author:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">POST</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Body</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email@email.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;firstname&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;lastname&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>get<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/api/author/&lt;author_id&gt;</span></code></p>
+<p>Retrieves data for the specified author:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">GET</span> <span class="ow">or</span> <span class="n">POST</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Body</span><span class="p">:</span> <span class="n">Empty</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="login">
+<h2>login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">/api/author/login</span></code></p>
+<p>Logs in an existing author:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">POST</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Body</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email@email.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="logout">
+<h2>logout<a class="headerlink" href="#logout" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">GET/POST</span> <span class="pre">/api/author/logout</span></code></p>
+<p>Logs a author out if they are logged in:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">GET</span> <span class="ow">or</span> <span class="n">POST</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">N</span><span class="o">/</span><span class="n">A</span>
+<span class="n">Body</span><span class="p">:</span> <span class="n">Empty</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="is-authorized">
+<h2>is authorized<a class="headerlink" href="#is-authorized" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/api/author/is-authorized</span></code></p>
+<p>Returns whether or not a author is logged in. author will be empty if not authorized:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">GET</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">N</span><span class="o">/</span><span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="forgot-password">
+<h2>forgot password<a class="headerlink" href="#forgot-password" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">/api/author/forgot-password</span></code></p>
+<p>Triggers a &#8220;forgot password&#8221; email to be sent to a specified email address:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">POST</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Body</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email@email.com&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reset-password">
+<h2>reset password<a class="headerlink" href="#reset-password" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">/api/author/reset-password</span></code></p>
+<p>Used to reset a password from a temporary sign-in link that was sent to the author through the <code class="docutils literal"><span class="pre">forgot</span> <span class="pre">password</span></code> endpoint:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">POST</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Body</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Forgot Password Token&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;new_password&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;confirmed_password&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="email-confirmation">
+<h2>email confirmation<a class="headerlink" href="#email-confirmation" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">GET/POST</span> <span class="pre">/api/author/email-confirmation</span></code></p>
+<p>Used to send an email to the email address the author signed up with with a temporary link that can be used to confirm that the email is real and is controlled by the author:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">GET</span> <span class="ow">or</span> <span class="n">POST</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">N</span><span class="o">/</span><span class="n">A</span>
+<span class="n">Body</span><span class="p">:</span> <span class="n">Empty</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete">
+<h2>delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">/api/author/delete</span></code></p>
+<p>Used to delete an existing author. Login is required:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">POST</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Body</span><span class="p">:</span> <span class="n">Empty</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="photo">
+<h2>photo<a class="headerlink" href="#photo" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">/api/author/photo`</span></code></p>
+<p>Used to upload profile photos for the author:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">POST</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">multipart</span><span class="o">/</span><span class="n">form</span><span class="o">-</span><span class="n">data</span>
+<span class="n">Body</span><span class="p">:</span> <span class="n">Files</span> <span class="n">keyed</span> <span class="n">by</span> <span class="n">name</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="s1">&#39;profile_banner_photo&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;mybanner.jpg&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">data</span><span class="o">&gt;</span><span class="p">,</span> <span class="s1">&#39;jpg&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;profile_photo&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;myphoto.png&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">data</span><span class="o">&gt;</span><span class="p">,</span> <span class="s1">&#39;png)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="update">
+<h2>update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">/api/author/update</span></code></p>
+<p>Used to update an author&#8217;s settings:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Method</span><span class="p">:</span> <span class="n">POST</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Body</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Lindsay&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Lohan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;lindsay@lohan.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;FreakyFriday&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;This is lindsay&#39;s bio.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;freaky-friday&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><cite>NOTE</cite>: all parameters optional</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="collection.html" class="btn btn-neutral float-right" title="Collection" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Pentameter.org.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
