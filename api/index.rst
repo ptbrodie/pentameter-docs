@@ -18,14 +18,11 @@ Response Types
 --------------
 
 .. toctree::
+    :maxdepth: 3
 
-    Author Response
-    Collection Response
-    Poem Response
-    List of Authors
-    List of Collections
-    List of Poems
-
+    Author <author_response>
+    Collection <collection_response>
+    Poem <poem_response>
 
 
 Endpoints
